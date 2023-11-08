@@ -9,9 +9,6 @@ LISTA1, LISTA2 = [], []
 TD_POSICAO_INICIAL1, TD_POSICAO_INICIAL2 = [], []
 LETRA_TORPEDO1, LETRA_TORPEDO2 = [], []
 NUMERO_TORPEDO1, NUMERO_TORPEDO2 = [], []
-LETRA1, LETRA2 = [], []
-NUMERO1, NUMERO2 = [], []
-JUNCAO1, JUNCAO2 = [], []
 
 ENCOURACADO_J1, PORTA_AVIOES_J1, SUBMARINOS_J1, CRUZADORES_J1 = [],[],[],[]
 ENCOURACADO_J2, PORTA_AVIOES_J2, SUBMARINOS_J2, CRUZADORES_J2 = [],[],[],[]
@@ -82,31 +79,6 @@ print("Todas as posições iniciais das peças do Jogador 2")
 print(b)
 print()
 
-for i in (TORPEDOSJ1):            
-    LETRA_TORPEDO1.append(i[:1])        
-    NUMERO_TORPEDO1.append(i[1:])      
-
-print("Letras do torpedo Jogador 1")
-print(LETRA_TORPEDO1)
-print()
-print("Numeros do torpedo Jogador 1")
-print(NUMERO_TORPEDO1)
-print()
-
-for i in (TORPEDOSJ2):            
-    LETRA_TORPEDO2.append(i[:1])        
-    NUMERO_TORPEDO2.append(i[1:])       
-
-print("Letra dos torpedos Jogador 2")
-print(LETRA_TORPEDO2)
-print()
-print("Numero dos torpedos Jogador 2")
-print(NUMERO_TORPEDO2)
-print()
-
-JUNCAO1 = POSICAO1[1] + POSICAO1[2] + POSICAO1[3] + POSICAO1[4]
-JUNCAO2 = POSICAO2[1] + POSICAO2[2] + POSICAO2[3] + POSICAO2[4]
-
 # ============================================================================================================
 
 # POSIÇÕES DAS PEÇAS DO JOGADOR 1
@@ -164,7 +136,7 @@ for i in a[5:7]:
             PORTA_AVIOES_J1.append(proximo)
 
 # POSIÇÃO DOS SUBMARINOS
-SUBMARINOS_J1 = POSICAO2[3]
+SUBMARINOS_J1 = POSICAO1[3]
 
 # POSIÇÃO DOS CRUZADORES
 for i in a[17::]:
@@ -206,8 +178,8 @@ print("Cruzadores")
 print(CRUZADORES_J1)
 print()
 
-TESTE_LETRA1 = []
-TESTE_NUMERO1 = []
+LETRA_PECA1 = []
+NUMERO_PECA1 = []
 
 for i in a[:5]:                    
     primeiraLetra = i[:1:]         
@@ -217,8 +189,8 @@ for i in a[:5]:
         numero = numero[:-1:]      
     else:
         numero = numero[0]
-    TESTE_LETRA1.append(primeiraLetra)
-    TESTE_NUMERO1.append(numero)
+    LETRA_PECA1.append(primeiraLetra)
+    NUMERO_PECA1.append(numero)
 
 for i in a[5:7]:                    
     primeiraLetra = i[:1:]          
@@ -228,15 +200,14 @@ for i in a[5:7]:
         numero = numero[:-1:]      
     else:
         numero = numero[0]
-        TESTE_LETRA1.append(primeiraLetra)
-        TESTE_NUMERO1.append(numero)
+        LETRA_PECA1.append(primeiraLetra)
+        NUMERO_PECA1.append(numero)
 
-SUBMARINOS_J1 = POSICAO2[3]
 for i in SUBMARINOS_J1:
     primeiraLetra = i[:1:]
     numero = i[1::]
-    TESTE_LETRA1.append(primeiraLetra)
-    TESTE_NUMERO1.append(numero)
+    LETRA_PECA1.append(primeiraLetra)
+    NUMERO_PECA1.append(numero)
 
 for i in a[17::]:
     primeiraLetra = i[:1:]
@@ -246,14 +217,8 @@ for i in a[17::]:
         numero = numero[:-1:]      
     else:
         numero = numero[0]
-    TESTE_LETRA1.append(primeiraLetra)
-    TESTE_NUMERO1.append(numero)
-
-
-print("TESTE1 TESTE1 TESTE1 TESTE1 TESTE1")
-print(TESTE_LETRA1)
-print(TESTE_NUMERO1)
-print()
+    LETRA_PECA1.append(primeiraLetra)
+    NUMERO_PECA1.append(numero)
 
 # ============================================================================================================
 
@@ -355,8 +320,8 @@ print(CRUZADORES_J2)
 print()
 
 
-TESTE_LETRA2 = []
-TESTE_NUMERO2 = []
+LETRA_PECA2 = []
+NUMERO_PECA2 = []
 
 for i in b[:5]:                    
     primeiraLetra = i[:1:]         
@@ -366,8 +331,8 @@ for i in b[:5]:
         numero = numero[:-1:]      
     else:
         numero = numero[0]
-    TESTE_LETRA2.append(primeiraLetra)
-    TESTE_NUMERO2.append(numero)
+    LETRA_PECA2.append(primeiraLetra)
+    NUMERO_PECA2.append(numero)
 
 for i in b[5:7]:                    
     primeiraLetra = i[:1:]          
@@ -377,14 +342,14 @@ for i in b[5:7]:
         numero = numero[:-1:]      
     else:
         numero = numero[0]
-        TESTE_LETRA2.append(primeiraLetra)
-        TESTE_NUMERO2.append(numero)
+        LETRA_PECA2.append(primeiraLetra)
+        NUMERO_PECA2.append(numero)
 
 for i in SUBMARINOS_J2:
     primeiraLetra = i[:1:]
     numero = i[1::]
-    TESTE_LETRA2.append(primeiraLetra)
-    TESTE_NUMERO2.append(numero)
+    LETRA_PECA2.append(primeiraLetra)
+    NUMERO_PECA2.append(numero)
 
 for i in b[17::]:
     primeiraLetra = i[:1:]
@@ -394,14 +359,8 @@ for i in b[17::]:
         numero = numero[:-1:]      
     else:
         numero = numero[0]
-    TESTE_LETRA2.append(primeiraLetra)
-    TESTE_NUMERO2.append(numero)
-
-
-print("TESTE2 TESTE2 TESTE2 TESTE2 TESTE2")
-print(TESTE_LETRA2)
-print(TESTE_NUMERO2)
-print()
+    LETRA_PECA2.append(primeiraLetra)
+    NUMERO_PECA2.append(numero)
 
 TODAS_POSICOES_JG1 = ENCOURACADO_J1 + PORTA_AVIOES_J1 + SUBMARINOS_J1 + CRUZADORES_J1
 TODAS_POSICOES_JG2 = ENCOURACADO_J2 + PORTA_AVIOES_J2 + SUBMARINOS_J2 + CRUZADORES_J2
@@ -411,6 +370,44 @@ print(TODAS_POSICOES_JG1)
 print()
 print("Todas as posições das peças do jogador 2")
 print(TODAS_POSICOES_JG2)
+print()
+
+# ============================================================================================================
+
+print("Letras da peça Jogador 1")
+print(LETRA_PECA1)
+print()
+print("Números da peça Jogador 1")
+print(NUMERO_PECA1)
+print()
+
+for i in (TORPEDOSJ1):            
+    LETRA_TORPEDO1.append(i[:1])        
+    NUMERO_TORPEDO1.append(i[1:])      
+
+print("Letras do torpedo Jogador 1")
+print(LETRA_TORPEDO1)
+print()
+print("Numeros do torpedo Jogador 1")
+print(NUMERO_TORPEDO1)
+print()
+
+print("Letras da peça Jogador 2")
+print(LETRA_PECA2)
+print()
+print("Números da peça Jogador 2")
+print(NUMERO_PECA2)
+print()
+
+for i in (TORPEDOSJ2):            
+    LETRA_TORPEDO2.append(i[:1])        
+    NUMERO_TORPEDO2.append(i[1:])       
+
+print("Letra dos torpedos Jogador 2")
+print(LETRA_TORPEDO2)
+print()
+print("Numero dos torpedos Jogador 2")
+print(NUMERO_TORPEDO2)
 print()
 
 # ============================================================================================================
@@ -455,14 +452,14 @@ def main():
             RESULTADO.write('JOGADOR1 ERROR_POSITION_NONEXISTENT_VALIDATION')
             return
         
-    for letraPeca1 in range(0,len(TESTE_LETRA1)):
-        erro = (LETRA1[letraPeca1]) in LETRAS_TABULEIRO
+    for letraPeca1 in range(0,len(LETRA_PECA1)):
+        erro = (LETRA_PECA1[letraPeca1]) in LETRAS_TABULEIRO
         if erro == False:
             RESULTADO.write('JOGADOR1 ERROR_POSITION_NONEXISTENT_VALIDATION')
             return
 
-    for numeroPeca1 in range(0,len(TESTE_NUMERO1)):
-        erro = (NUMERO1[numeroPeca1]) in NUMEROS_TABULEIRO
+    for numeroPeca1 in range(0,len(NUMERO_PECA1)):
+        erro = (NUMERO_PECA1[numeroPeca1]) in NUMEROS_TABULEIRO
         if erro == False:
             RESULTADO.write('JOGADOR1 ERROR_POSITION_NONEXISTENT_VALIDATION')
             return
@@ -480,36 +477,24 @@ def main():
             RESULTADO.write('JOGADOR2 ERROR_POSITION_NONEXISTENT_VALIDATION')
             return
         
-    for letraPeca2 in range(0,len(TESTE_LETRA2)):
-        erro = (LETRA2[letraPeca2]) in LETRAS_TABULEIRO
+    for letraPeca2 in range(0,len(LETRA_PECA2)):
+        erro = (LETRA_PECA2[letraPeca2]) in LETRAS_TABULEIRO
         if erro == False:
             RESULTADO.write('JOGADOR2 ERROR_POSITION_NONEXISTENT_VALIDATION')
             return
 
-    for numeroPeca2 in range(0,len(TESTE_NUMERO2)):
-        erro = (NUMERO2[numeroPeca2]) in NUMEROS_TABULEIRO
+    for numeroPeca2 in range(0,len(NUMERO_PECA2)):
+        erro = (NUMERO_PECA2[numeroPeca2]) in NUMEROS_TABULEIRO
         if erro == False:
             RESULTADO.write('JOGADOR2 ERROR_POSITION_NONEXISTENT_VALIDATION')
             return
         
 # ============================================================================================================
 
-    ACERTOS_EJ1 = [] 
-    ACERTOS_PAJ1 = []
-    ACERTOS_SJ1 = []
-    ACERTOS_CJ1 = []
-    ACERTOS_EJ2 = []
-    ACERTOS_PAJ2 = []
-    ACERTOS_SJ2 = []
-    ACERTOS_CJ2 = []
-    ENCOURACADO_ACERTADO1 = 0
-    PORTA_AVIOES_ACERTADO1 = 0
-    SUBMARINO_ACERTADO1 = 0
-    CRUZADOR_ACERTADO1 = 0
-    ENCOURACADO_ACERTADO2 = 0
-    PORTA_AVIOES_ACERTADO2 = 0
-    SUBMARINO_ACERTADO2 = 0
-    CRUZADOR_ACERTADO2 = 0
+    ACERTOS_EJ1, ACERTOS_PAJ1, ACERTOS_SJ1, ACERTOS_CJ1 = [], [], [], []
+    ACERTOS_EJ2, ACERTOS_PAJ2, ACERTOS_SJ2, ACERTOS_CJ2 = [], [], [], []
+    ENCOURACADO_ACERTADO1, PORTA_AVIOES_ACERTADO1, SUBMARINO_ACERTADO1, CRUZADOR_ACERTADO1 = 0, 0, 0, 0
+    ENCOURACADO_ACERTADO2, PORTA_AVIOES_ACERTADO2, SUBMARINO_ACERTADO2, CRUZADOR_ACERTADO2 = 0, 0, 0, 0
 
     total_acertos_ej1 = 0
     for indice in range(0, len(ENCOURACADO_J1)):
@@ -660,15 +645,17 @@ def main():
 
     # JOGO EMPATADO
     if PONTOS_JOGADOR_1 == PONTOS_JOGADOR_2:
-        RESULTADO.write("J1 {}AA {}AE {}PT \nJ2 {}AA {}AE {}PT".format(str(TOTAL_ACERTADO_JOGADOR_1),str(NAO_ACERTADO_JOGADOR_1),str(PONTOS_JOGADOR_1),str(TOTAL_ACERTADO_JOGADOR_2),str(NAO_ACERTADO_JOGADOR_2),str(PONTOS_JOGADOR_2)))
+        RESULTADO.write("JOGADOR1 {}AA {}AE {}PT \nJOGADOR2 {}AA {}AE {}PT".format(str(TOTAL_ACERTADO_JOGADOR_1),str(NAO_ACERTADO_JOGADOR_1),str(PONTOS_JOGADOR_1),str(TOTAL_ACERTADO_JOGADOR_2),str(NAO_ACERTADO_JOGADOR_2),str(PONTOS_JOGADOR_2)))
         return 
+    
     # JOGADOR 1 - GANHOU
     if PONTOS_JOGADOR_1 > PONTOS_JOGADOR_2:
-        RESULTADO.write('J1 {}AA {}AE {}PT'.format(str(TOTAL_ACERTADO_JOGADOR_1),str(NAO_ACERTADO_JOGADOR_1),str(PONTOS_JOGADOR_1)))
+        RESULTADO.write('JOGADOR1 {}AA {}AE {}PT'.format(str(TOTAL_ACERTADO_JOGADOR_1),str(NAO_ACERTADO_JOGADOR_1),str(PONTOS_JOGADOR_1)))
         return
+    
     # JOGADOR 2 - GANHOU    
     if PONTOS_JOGADOR_2 > PONTOS_JOGADOR_1:
-        RESULTADO.write('J2 {}AA {}AE {}PT'.format(str(TOTAL_ACERTADO_JOGADOR_2),str(NAO_ACERTADO_JOGADOR_2),str(TOTAL_ACERTADO_JOGADOR_2)))
+        RESULTADO.write('JOGADOR2 {}AA {}AE {}PT'.format(str(TOTAL_ACERTADO_JOGADOR_2),str(NAO_ACERTADO_JOGADOR_2),str(PONTOS_JOGADOR_2)))
         return
 
 #Inicia a Função
